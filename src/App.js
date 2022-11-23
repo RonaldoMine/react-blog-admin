@@ -3,14 +3,14 @@ import SignUp from "./pages/auth/SignUp";
 import "antd/dist/antd.min.css";
 import "./assets/styles/main.css";
 import "./assets/styles/responsive.css";
-import MainAuth from "./components/Layout/MainAuth";
+import MainAuth from "./components/layout/MainAuth";
 import {QueryClient, QueryClientProvider} from "react-query";
 import SignIn from "./pages/auth/SignIn";
 import Dashboard from "./pages/Dashboard";
 import AuthProvider from "./context/AuthProvider";
 import RequireAuth from "./components/RequireAuth";
 import ManageRoute from "./components/ManageRoute";
-import Main from "./components/Layout/Main";
+import Main from "./components/layout/Main";
 import Post from "./pages/post/Post";
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
                         <Route path={"sign-up"} element={<SignUp/>}/>
                         <Route path={"sign-in"} element={<SignIn/>}/>
                     </Route>
-                    <Route element={<Main/>}>
-                        <Route element={<RequireAuth/>}>
+                    <Route element={<RequireAuth/>}>
+                         <Route element={<Main/>}>
                             <Route path={"dashboard"} element={<Dashboard/>}/>
                             <Route path={"posts"} element={<Post/>}/>
                         </Route>

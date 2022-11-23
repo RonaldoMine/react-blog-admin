@@ -19,8 +19,7 @@ function SignIn() {
         const datas = form.getFieldsValue();
         let response = login(datas);
         response.then((r) => {
-            console.log(r.data.user);
-            auth.signin(r.data.user);
+            auth.signIn(r.data.user);
             navigate("/dashboard", {replace: true});
             message.success(r.data.message);
         });

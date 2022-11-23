@@ -1707,10 +1707,6 @@ ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.left-nav
 .ant-progress-project .ant-progress-bg {
   height: 3px !important;
 }
-.ant-table-tbody > tr > td,
-.ant-table-thead > tr > th {
-  white-space: nowrap;
-}
 .h-full {
   height: 100%;
 }
